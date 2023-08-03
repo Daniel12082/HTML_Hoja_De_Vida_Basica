@@ -1,0 +1,103 @@
+#main,
+html {
+background-color: white;
+height: 100%;
+}
+
+.container {
+display: grid;
+height: 100%;
+grid-template-columns: 33.33% 33.33% 33.34%;
+grid-template-rows: auto;
+grid-template-areas: "section1 section2 section3";
+}
+
+.section1,
+.section2,
+.section3 {
+border: 1px solid red;
+display: flex;
+flex-direction: column;
+padding: 5%;
+}
+
+.sections {
+background-color: antiquewhite;
+flex-grow: 1;
+height: 80%;
+}
+.titulop{
+    height: 20%;
+}
+.contenido {
+border: 1px solid blue;
+flex-grow: 1; /* Ocupa el espacio restante en la columna */
+}
+
+.foto {
+text-align: center;
+}
+
+#foto {
+border-radius: 50%;
+}
+
+.titulop {
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: coral;
+font-size: x-large;
+}
+
+.tituloS > h2 {
+margin: 0;
+}
+
+.parrafos > p {
+margin: 0;
+margin-top: 2.5%;
+}
+
+@media screen and (max-width: 1160px) {
+#foto {
+width: 120px;
+}
+.titulop {
+font-size: small;
+}
+.tituloS {
+font-size: small;
+}
+.tituloS > h2 {
+margin: 0;
+}
+.parrafos {
+font-size: small;
+}
+.parrafos  p{
+    font-size: x-small;
+}
+}
+
+@media screen and (max-width: 600px) {
+.container {
+display: flex; /* Cambiamos a display flex para ajustar elementos en una fila */
+flex-direction: column; /* Alinear los elementos verticalmente */
+}
+.section1,
+.section2,
+.section3 {
+height: auto; /* Altura automática en dispositivos móviles */
+margin-bottom: 10px; /* Agregamos un margen inferior para separar las secciones */
+}
+.sections {
+flex: 1; /* Ocupa el espacio restante en la columna en dispositivos móviles */
+}
+.titulop {
+font-size: small;
+}
+.parrafos  p{
+    font-size: xx-small;
+}
+}
